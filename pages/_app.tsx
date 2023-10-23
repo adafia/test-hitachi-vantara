@@ -1,6 +1,10 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import { HvProvider } from "@hitachivantara/uikit-react-core";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <HvProvider>
+      <Component {...pageProps} />
+    </HvProvider>
+  );
 }
